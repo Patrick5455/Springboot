@@ -25,14 +25,17 @@
 :: Basic - Intermediate - Advanced Springboot Concepts
 
 ### Basic
- - Starting a spring application via Maven
+ - Starting a spring application via Maven 
  - Basic Spring Application Tiers : Model, Repository, Service
  - Spring Configurations Settings: _Java & XML_
  - Dependency Injection: Setter and Constructor Dependency Injection
  - Spring Scopes : _Lifetime of  a bean_
-  1. SIngleton
+ 
+  1. Singleton
   2. Prototype
+  
   Web Scopes:
+  
   3. Request
   4. Session
   5. Global
