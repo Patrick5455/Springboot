@@ -7,11 +7,23 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="speakerRepoBean"
           class="com.conference.repo.speakerRepoImpl"/>
 
+<!--     constructor based injection-->
+
     <bean name="speakerServiceBean"
           class="com.conference.service.SpeakerServiceImpl">
 
         <constructor-arg index="0" ref="speakerRepoBean"/>
 
     </bean>
+
+
+<!--    setter based injection-->
+
+<!--    <bean name="speakerServiceBean"-->
+<!--          class="com.conference.service.SpeakerServiceImpl">-->
+
+<!--        <property name="speakerRepo" ref="speakerRepoBean"/>-->
+
+<!--    </bean>-->
 
 </beans>
