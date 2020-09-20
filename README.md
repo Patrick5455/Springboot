@@ -18,6 +18,10 @@
 
 ## Contact:
 [mail me](patrickojunde@gmail.com)
+[follow me](https://twitter.com/patrickojunde)
+[connect with me]()
+[call me](+234 810 470 8102)
+
 
 
 ## Concepts
