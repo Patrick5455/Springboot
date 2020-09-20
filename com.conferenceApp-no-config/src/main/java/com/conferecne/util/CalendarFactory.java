@@ -6,14 +6,21 @@ import java.util.Calendar;
 
 public class CalendarFactory implements FactoryBean<Calendar> {
 
+    private Calendar instance = Calendar.getInstance();
 
     @Override
     public Calendar getObject() throws Exception {
-        return null;
+        return instance;
     }
 
     @Override
     public Class<?> getObjectType() {
-        return null;
+        return Calendar.class;
     }
+
+    public void addDays(int num){
+        instance.add(Calendar.DAY_OF_YEAR, num);
+    }
+
+
 }
