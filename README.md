@@ -1,4 +1,4 @@
-# Buidling Springboot Applications - From Newbie to Badass.
+# Building Springboot Applications - From Newbie to Badass.
 
 > "_Convention over configuration_"
 
