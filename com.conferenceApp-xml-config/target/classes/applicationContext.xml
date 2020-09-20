@@ -7,22 +7,23 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="speakerRepoBean"
           class="com.conference.repo.speakerRepoImpl"/>
 
-<!--     constructor based injection-->
 
     <bean name="speakerServiceBean"
-          class="com.conference.service.SpeakerServiceImpl">
+          class="com.conference.service.SpeakerServiceImpl" autowire="constructor">
+        <!--          autowire by constructor nullifies the need for constructor-arg -->
 
-        <constructor-arg index="0" ref="speakerRepoBean"/>
+
+        <!--     constructor based injection-->
+<!--        <constructor-arg index="0" ref="speakerRepoBean"/>-->
 
     </bean>
 
 
-<!--    setter based injection-->
-
 <!--    <bean name="speakerServiceBean"-->
 <!--          class="com.conference.service.SpeakerServiceImpl">-->
 
-<!--        <property name="speakerRepo" ref="speakerRepoBean"/>-->
+    <!--    setter based injection-->
+    <!--        <property name="speakerRepo" ref="speakerRepoBean"/>-->
 
 <!--    </bean>-->
 
