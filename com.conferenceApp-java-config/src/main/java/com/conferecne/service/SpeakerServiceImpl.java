@@ -11,10 +11,14 @@ public class SpeakerServiceImpl implements SpeakerService {
     private SpeakerRepo speakerRepo;
 
 
-    public SpeakerServiceImpl(){}
+    public SpeakerServiceImpl(){
+        System.out.println("SpeakerServiceImpl NO-Args Constructor");
+    }
 
     // to be used for constructor bean dependency injection
     public SpeakerServiceImpl(SpeakerRepo speakerRepo){
+
+        System.out.println("SpeakerServiceImpl Repository Constructor");
         this.speakerRepo = speakerRepo;
     }
 
