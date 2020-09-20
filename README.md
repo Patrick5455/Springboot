@@ -31,7 +31,7 @@
 
 :: Basic - Intermediate - Advanced Springboot Concepts
 
-### Basic
+### Basic Concepts
  - Starting a spring application via Maven 
  - Basic Spring Application Tiers : Model, Repository, Service
  - Spring Configurations Settings: _Java, Annotations & XML_
@@ -59,3 +59,9 @@
   4. @Controller - controller objects
   
  - @ComponentScan : Scan all components found in the classpath
+ 
+- Advanced Bean Configurations:
+ 1. Bean Lifecycles; _@PostConstruct, @PreDestruct_
+ 2. Factory Bean
+ 2. spEL - Spring Expression Language
+ 
