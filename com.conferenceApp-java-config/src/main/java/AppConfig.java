@@ -20,11 +20,14 @@ public class AppConfig {
         // autowire bean of SpeakerRepo into bean of SpeakerService
 
         //1. Constructor dependency injection:
-        SpeakerServiceImpl speakerService = new SpeakerServiceImpl(
-                getSpeakerRepo()
-        );
+   //     SpeakerServiceImpl speakerService = new SpeakerServiceImpl(
+     //           getSpeakerRepo()
+       // );
+
         //2. Setter Dependency Injection:
       //  speakerService.setSpeakerRepo(getSpeakerRepo());
+
+        SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
 
         return speakerService;
     }
