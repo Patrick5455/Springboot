@@ -17,10 +17,13 @@
 :: If you would like to make contributions, feel free to fork the repo and make a pull request
 
 ## Contact:
-[mail me](patrickojunde@gmail.com)
-[follow me](https://twitter.com/patrickojunde)
-[connect with me]()
-[call me](+234 810 470 8102)
+[mail](patrickojunde@gmail.com)
+
+[twitter](https://twitter.com/patrickojunde)
+
+[linkedIn](https://www.linkedin.com/in/patrickojunde/)
+
+[phone -> ](+234 810 470 8102)
 
 
 
