@@ -34,9 +34,12 @@
 ### Basic
  - Starting a spring application via Maven 
  - Basic Spring Application Tiers : Model, Repository, Service
- - Spring Configurations Settings: _Java & XML_
+ - Spring Configurations Settings: _Java, Annotations & XML_
  - Dependency Injection: Setter and Constructor Dependency Injection
  - Spring Scopes : _Lifetime of  a bean_
+ 
+ 
+ Main Scopes:
  
   1. Singleton
   2. Prototype
@@ -46,3 +49,13 @@
   3. Request
   4. Session
   5. Global
+  
+ - Autowiring Dependencies 
+ 
+ - Stereotypes Annotations:
+  1. @Component - all bean annotations e.g @Service, @Bean, etc inheirt from
+  2. @Repository - repo objects
+  3. @Service - service object
+  4. @Controller - controller objects
+  
+ - @ComponentScan : Scan all components found in the classpath
