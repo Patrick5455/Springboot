@@ -28,6 +28,9 @@ public class SpeakerServiceImpl implements SpeakerService {
     @Autowired
     public void setSpeakerRepo(SpeakerRepo speakerRepo) {
 
+      // this would also be printed in the creation of instances of SpeakerServiceImpl
+        // due to the @Autowired annotation
+
         System.out.println("SpeakerServiceImpl setter");
 
         this.speakerRepo = speakerRepo;
