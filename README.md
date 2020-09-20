@@ -17,7 +17,7 @@
 :: If you would like to make contributions, feel free to fork the repo and make a pull request
 
 ## Contact:
-[patrickojune@gmail.com](email)
+[mail me](patrickojunde@gmail.com)
 
 
 ## Concepts
