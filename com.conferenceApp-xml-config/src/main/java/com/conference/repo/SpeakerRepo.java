@@ -1,6 +1,6 @@
-package com.conferecne.repo;
+package com.conference.repo;
 
-import com.conferecne.model.Speaker;
+import com.conference.model.Speaker;
 
 import java.util.List;
 

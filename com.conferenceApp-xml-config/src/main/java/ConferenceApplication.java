@@ -1,8 +1,5 @@
-import com.conferecne.model.Speaker;
-import com.conferecne.service.SpeakerService;
-import com.conferecne.service.SpeakerServiceImpl;
-
-import java.util.List;
+import com.conference.service.SpeakerService;
+import com.conference.service.SpeakerServiceImpl;
 
 public class ConferenceApplication {
 

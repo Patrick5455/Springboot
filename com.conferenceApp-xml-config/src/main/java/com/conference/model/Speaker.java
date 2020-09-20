@@ -1,4 +1,4 @@
-package com.conferecne.model;
+package com.conference.model;
 
 public class Speaker {
 
