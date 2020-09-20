@@ -4,20 +4,23 @@ import com.conferecne.service.SpeakerService;
 import com.conferecne.service.SpeakerServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+import com.conferecne.repo.SpeakerRepo;
 @Configuration
 public class AppConfig {
 
     @Bean(name = "speakerService")
     public SpeakerService getSpeakerService(){
-        SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
+
 
         // autowire bean of SpeakerRepo into bean of SpeakerService
 
-        // Setter Dependency Injection:
-        speakerService.setSpeakerRepo(getSpeakerRepo());
+        //1. Constructor dependency injection:
+        SpeakerServiceImpl speakerService = new SpeakerServiceImpl(
+                getSpeakerRepo()
+        );
+        //2. Setter Dependency Injection:
+      //  speakerService.setSpeakerRepo(getSpeakerRepo());
 
-        // Constructor Dependency Injection
         return speakerService;
     }
 
