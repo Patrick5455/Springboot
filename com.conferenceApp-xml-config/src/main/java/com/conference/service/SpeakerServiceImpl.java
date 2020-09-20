@@ -10,6 +10,14 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepo speakerRepo;
 
+    public SpeakerServiceImpl() {
+    }
+
+    public  SpeakerServiceImpl(SpeakerRepo speakerRepo){
+        this.speakerRepo = speakerRepo;
+    }
+
+
     public void setSpeakerRepo(SpeakerRepo speakerRepo) {
         this.speakerRepo = speakerRepo;
     }

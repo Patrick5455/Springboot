@@ -2,8 +2,16 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    
+    <bean name="speakerRepoBean"
+          class="com.conference.repo.speakerRepoImpl"/>
+
+    <bean name="speakerServiceBean"
+          class="com.conference.service.SpeakerServiceImpl">
+
+        <property name="speakerRepo" ref="speakerRepoBean"/>
+
+    </bean>
+
 </beans>

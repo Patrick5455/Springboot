@@ -10,7 +10,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="speakerServiceBean"
           class="com.conference.service.SpeakerServiceImpl">
 
-        <property name="speakerRepo" ref="speakerRepoBean"/>
+        <constructor-arg index="0" ref="speakerRepoBean"/>
 
     </bean>
 
