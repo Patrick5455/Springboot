@@ -21,7 +21,7 @@ public class ConferenceApplication {
         // app config class)
 
 
-
+        // get a bean of speakerService form the spring application contet
         SpeakerService service = applicationContext.getBean(
                 "speakerService", SpeakerService.class);
 
