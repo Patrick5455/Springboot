@@ -9,7 +9,7 @@ import java.util.List;
 @Repository("speakerRepo")
 public class speakerRepoImpl implements SpeakerRepo {
 
-    public List<Speaker> findAll(){
+    public List<Speaker> findAll() {
 
         List<Speaker> speakers = new ArrayList<Speaker>();
 

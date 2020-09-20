@@ -13,7 +13,6 @@ public class ConferenceApplication {
         System.out.println(service.findAll().get(0).getFirstName());
 
 
-
-        }
     }
+}
 

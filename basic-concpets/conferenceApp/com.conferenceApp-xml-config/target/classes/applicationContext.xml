@@ -14,17 +14,17 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
         <!--     constructor based injection-->
-<!--        <constructor-arg index="0" ref="speakerRepoBean"/>-->
+        <!--        <constructor-arg index="0" ref="speakerRepoBean"/>-->
 
     </bean>
 
 
-<!--    <bean name="speakerServiceBean"-->
-<!--          class="com.conference.service.SpeakerServiceImpl">-->
+    <!--    <bean name="speakerServiceBean"-->
+    <!--          class="com.conference.service.SpeakerServiceImpl">-->
 
     <!--    setter based injection-->
     <!--        <property name="speakerRepo" ref="speakerRepoBean"/>-->
 
-<!--    </bean>-->
+    <!--    </bean>-->
 
 </beans>

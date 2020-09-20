@@ -7,7 +7,7 @@ import java.util.List;
 
 public class speakerRepoImpl implements SpeakerRepo {
 
-    public List<Speaker> findAll(){
+    public List<Speaker> findAll() {
 
 
         List<Speaker> speakers = new ArrayList<Speaker>();

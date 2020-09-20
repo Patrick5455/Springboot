@@ -13,12 +13,12 @@ public class SpeakerServiceImpl implements SpeakerService {
     private SpeakerRepo speakerRepo;
 
 
-    public SpeakerServiceImpl(){
+    public SpeakerServiceImpl() {
         System.out.println("SpeakerServiceImpl No-Args Constructor");
     }
 
     // to be used for constructor bean dependency injection
-    public SpeakerServiceImpl(SpeakerRepo speakerRepo){
+    public SpeakerServiceImpl(SpeakerRepo speakerRepo) {
 
         System.out.println("SpeakerServiceImpl Repository Constructor");
 
@@ -29,7 +29,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     @Autowired
     public void setSpeakerRepo(SpeakerRepo speakerRepo) {
 
-      // this would also be printed in the creation of instances of SpeakerServiceImpl
+        // this would also be printed in the creation of instances of SpeakerServiceImpl
         // due to the @Autowired annotation
 
         System.out.println("SpeakerServiceImpl setter");
@@ -37,7 +37,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         this.speakerRepo = speakerRepo;
     }
 
-    public List<Speaker> findAll () {
+    public List<Speaker> findAll() {
 
         return speakerRepo.findAll();
     }

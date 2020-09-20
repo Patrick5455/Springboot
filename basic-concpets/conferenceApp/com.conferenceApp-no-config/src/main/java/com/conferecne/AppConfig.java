@@ -12,7 +12,7 @@ import java.util.Calendar;
 public class AppConfig {
 
     @Bean(name = "cal")
-    public CalendarFactory calFactory(){
+    public CalendarFactory calFactory() {
         CalendarFactory factory = new CalendarFactory();
 
         factory.addDays(2);
@@ -22,10 +22,9 @@ public class AppConfig {
 
 
     @Bean
-    public Calendar cal()throws Exception{
+    public Calendar cal() throws Exception {
         return calFactory().getObject();
     }
-
 
 
 }

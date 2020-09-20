@@ -15,7 +15,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     @Autowired
-    public  SpeakerServiceImpl(SpeakerRepo speakerRepo){
+    public SpeakerServiceImpl(SpeakerRepo speakerRepo) {
         this.speakerRepo = speakerRepo;
     }
 
@@ -24,7 +24,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         this.speakerRepo = speakerRepo;
     }
 
-    public List<Speaker> findAll () {
+    public List<Speaker> findAll() {
         return speakerRepo.findAll();
     }
 

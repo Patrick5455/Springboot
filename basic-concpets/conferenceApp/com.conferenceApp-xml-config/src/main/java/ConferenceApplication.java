@@ -11,13 +11,12 @@ public class ConferenceApplication {
                 "applicationContext.xml");
 
         SpeakerService service =
-                applicationContext.getBean("speakerServiceBean",SpeakerServiceImpl.class);
+                applicationContext.getBean("speakerServiceBean", SpeakerServiceImpl.class);
 
 
         System.out.println(service.findAll().get(0).getFirstName());
 
 
-
-        }
     }
+}
 

@@ -18,7 +18,7 @@ public class CalendarFactory implements FactoryBean<Calendar> {
         return Calendar.class;
     }
 
-    public void addDays(int num){
+    public void addDays(int num) {
         instance.add(Calendar.DAY_OF_YEAR, num);
     }
 

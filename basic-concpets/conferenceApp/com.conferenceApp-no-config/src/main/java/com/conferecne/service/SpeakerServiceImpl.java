@@ -10,7 +10,7 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepo speakerRepo = new speakerRepoImpl();
 
-    public List<Speaker> findAll () {
+    public List<Speaker> findAll() {
         return speakerRepo.findAll();
     }
 
