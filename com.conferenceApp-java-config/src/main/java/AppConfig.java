@@ -15,7 +15,7 @@ public class AppConfig {
         // autowire bean of SpeakerRepo into bean of SpeakerService
         speakerService.setSpeakerRepo(getSpeakerRepo());
 
-        return new SpeakerServiceImpl();
+        return speakerService;
     }
 
 
