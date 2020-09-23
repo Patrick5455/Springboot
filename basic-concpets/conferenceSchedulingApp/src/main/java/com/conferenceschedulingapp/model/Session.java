@@ -1,10 +1,11 @@
 package com.conferenceschedulingapp.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
+import com.conferenceschedulingapp.model.Speaker;
+import com.sun.jdi.PrimitiveValue;
+import org.hibernate.annotations.Type;
 
 @Entity(name = "sessions")
 public class Session {
@@ -16,8 +17,31 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long session_id;
-
     private String session_name;
+    private String session_description;
+    private Integer session_length;
+
+    @Lob //Large Binary Object
+    @Type(type = "org.hibernate.type.BinaryType") //helps hibernate deal with binary data
+    private byte[] speaker_photo;
+
+    @ManyToMany
+    @JoinTable(
+            name = "session_speakers",
+            joinColumns = @JoinColumn(name = "session_id"),
+            inverseJoinColumns = @JoinColumn(name = "speaker_id")
+    )
+    private List<Speaker> speakers;
+
+    //pojos
+
+    public byte[] getSpeaker_photo() {
+        return speaker_photo;
+    }
+
+    public void setSpeaker_photo(byte[] speaker_photo) {
+        this.speaker_photo = speaker_photo;
+    }
 
     public Long getSession_id() {
         return session_id;
@@ -51,11 +75,11 @@ public class Session {
         this.session_length = session_length;
     }
 
-    private String session_description;
-    private Integer session_length;
+    public List<Speaker> getSpeakers() {
+        return speakers;
+    }
 
-
-
-
-
+    public void setSpeakers(List<Speaker> speakers) {
+        this.speakers = speakers;
+    }
 }
