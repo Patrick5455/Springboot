@@ -1,4 +1,4 @@
-INSERT INTO ticket_types (ticket_type_code,ticket_type_name,description,includes_workshop)
+﻿INSERT INTO ticket_types (ticket_type_code,ticket_type_name,description,includes_workshop)
 VALUES ('P','Premium','Access to all conference events plus attend the workshop of your choice.',TRUE),
        ('S','Standard','Access to all conference keynotes,sessions,community open spaces and the exhibition hall',FALSE),
        ('C','Community','Access to keynotes,community open spaces and the exhibition hall',FALSE);

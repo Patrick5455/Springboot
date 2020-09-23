@@ -6,7 +6,7 @@ CREATE TABLE attendees
     title        varchar(40) NULL,
     company      varchar(50) NULL,
     email        varchar(80) NOT NULL,
-    phone_number varchar(20) NULL
+    phone_number varchar(20) NULL 
 );
 
 CREATE TABLE ticket_types
