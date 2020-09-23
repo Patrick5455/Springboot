@@ -21,9 +21,7 @@ public class Session {
     private String session_description;
     private Integer session_length;
 
-    @Lob //Large Binary Object
-    @Type(type = "org.hibernate.type.BinaryType") //helps hibernate deal with binary data
-    private byte[] speaker_photo;
+
 
     @ManyToMany
     @JoinTable(
@@ -34,14 +32,6 @@ public class Session {
     private List<Speaker> speakers;
 
     //pojos
-
-    public byte[] getSpeaker_photo() {
-        return speaker_photo;
-    }
-
-    public void setSpeaker_photo(byte[] speaker_photo) {
-        this.speaker_photo = speaker_photo;
-    }
 
     public Long getSession_id() {
         return session_id;
