@@ -1,11 +1,8 @@
-package com.conferenceschedulingapp.model;
+package com.conferenceschedulingapp.models;
 
 
 import javax.persistence.*;
 import java.util.List;
-import com.conferenceschedulingapp.model.Speaker;
-import com.sun.jdi.PrimitiveValue;
-import org.hibernate.annotations.Type;
 
 @Entity(name = "sessions")
 public class Session {

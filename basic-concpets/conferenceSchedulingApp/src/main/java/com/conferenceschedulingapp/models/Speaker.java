@@ -1,4 +1,4 @@
-package com.conferenceschedulingapp.model;
+package com.conferenceschedulingapp.models;
 
 import org.hibernate.annotations.Type;
 
