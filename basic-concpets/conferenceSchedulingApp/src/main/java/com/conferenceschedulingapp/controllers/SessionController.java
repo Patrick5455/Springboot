@@ -3,6 +3,7 @@ package com.conferenceschedulingapp.controllers;
 import com.conferenceschedulingapp.models.Session;
 import com.conferenceschedulingapp.repositories.SessionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,9 +27,12 @@ public class SessionController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED) // to specify the type of response we are doing and override the default 100 response
     public Session createSession(@RequestBody final Session session){
         return sessionRepo.saveAndFlush(session);
     }
+
+
 
 
 }
