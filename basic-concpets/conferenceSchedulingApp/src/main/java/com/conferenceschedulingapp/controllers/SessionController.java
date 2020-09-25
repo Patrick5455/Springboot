@@ -51,9 +51,11 @@ public class SessionController {
         // beanutils method takes the existing session and copies the incoming session into the existing session
         BeanUtils.copyProperties(session, existingSession, "session_id");
         return sessionRepo.saveAndFlush(existingSession);
-
-
     }
+
+
+
+
 
 
 
