@@ -29,8 +29,21 @@ public class SessionController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED) // to specify the type of response we are doing and override the default 100 response
     public Session createSession(@RequestBody final Session session){
+        // save an object and flush it to the database
         return sessionRepo.saveAndFlush(session);
     }
+
+    @RequestMapping(value = ("{id}"), method = RequestMethod.DELETE)
+    public void deleteSession(@PathVariable Long id){
+        // Also need to check for children records before deleting
+        sessionRepo.deleteById(id);
+    }
+
+
+
+
+
+
 
 
 
