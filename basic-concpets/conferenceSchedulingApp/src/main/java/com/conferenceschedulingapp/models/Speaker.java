@@ -24,7 +24,7 @@ public class Speaker {
     private String company;
     private String speaker_bio;
 
-    @Lob //Large Binary Object
+    @Lob //Large Object
     @Type(type = "org.hibernate.type.BinaryType") //helps hibernate deal with binary data
     private byte[] speaker_photo;
 
