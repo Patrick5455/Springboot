@@ -1,11 +1,18 @@
 package com.conferencePlanner.conferenceplanner;
 
+import org.apache.tomcat.util.descriptor.LocalResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import java.security.PublicKey;
+import java.util.Locale;
 
 @Configuration
 public class ConferenceConfig implements WebMvcConfigurer {
@@ -23,6 +30,28 @@ public class ConferenceConfig implements WebMvcConfigurer {
        registry.addResourceHandler("/files/**")
                .addResourceLocations("/WEB-INF/pdf/");
    }
+
+   // register interceptor beans
+   @Override
+   public void addInterceptors(InterceptorRegistry interceptorRegistry){
+       interceptorRegistry.addInterceptor(localeChangeInterceptor());
+   }
+
+   //Internationalization (I18N) with Spring Boot
+    @Bean
+    public SessionLocaleResolver localResolver(){
+        SessionLocaleResolver slr = new SessionLocaleResolver();
+        slr.setDefaultLocale(Locale.US);
+        return slr;
+    }
+
+    @Bean
+    public LocaleChangeInterceptor localeChangeInterceptor(){
+       LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
+       lci.setParamName("lang");
+       return lci;
+    }
+
 
 
     // implementing the view resolver configured in application properties
