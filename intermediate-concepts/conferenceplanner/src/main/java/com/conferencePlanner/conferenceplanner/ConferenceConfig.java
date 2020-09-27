@@ -3,6 +3,7 @@ package com.conferencePlanner.conferenceplanner;
 import org.apache.tomcat.util.descriptor.LocalResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -39,7 +40,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
 
    //Internationalization (I18N) with Spring Boot
     @Bean
-    public SessionLocaleResolver localResolver(){
+    public LocaleResolver localResolver(){
         SessionLocaleResolver slr = new SessionLocaleResolver();
         slr.setDefaultLocale(Locale.US);
         return slr;
