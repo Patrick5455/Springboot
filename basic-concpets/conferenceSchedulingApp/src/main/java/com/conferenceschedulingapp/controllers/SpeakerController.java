@@ -22,33 +22,32 @@ public class SpeakerController {
 
     //get a speaker
 
-    @GetMapping(("{id}"))
-    public Speaker getOneSpeaker(@PathVariable Long id){
+    @GetMapping("{id}")
+    public Speaker getOneSpeaker(@PathVariable Integer id){
         return speakerRepo.getOne(id);
     }
 
     //create a speaker
     @PostMapping
-    public Speaker addSpeaker(@RequestBody Speaker speaker){
+    public Speaker addSpeaker(@RequestBody final Speaker speaker){
        return speakerRepo.saveAndFlush(speaker);
     }
 
     //delete a speaker
-    @RequestMapping(value = ("{id}"), method = RequestMethod.DELETE)
-    public void deleteSpeaker(@PathVariable Long id){
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void deleteSpeaker(@PathVariable Integer id){
         speakerRepo.deleteById(id);
     }
 
     //update Speaker
-    @RequestMapping(value = ("{id}"), method = RequestMethod.PUT)
-    public Speaker updateSpeaker(@PathVariable Long id, Speaker speaker){
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Speaker updateSpeaker(@PathVariable Integer id, Speaker speaker){
         //TODO: Add validation later to check if incoming speaker object has all speaker attributes
 
         Speaker existingSpeaker = speakerRepo.getOne(id);
         //replace existing speaker properties with incoming speaker
         BeanUtils.copyProperties(speaker, existingSpeaker, "session_id");
-
-        return speakerRepo.saveAndFlush(speaker);
+        return speakerRepo.saveAndFlush(existingSpeaker);
     }
 
 
