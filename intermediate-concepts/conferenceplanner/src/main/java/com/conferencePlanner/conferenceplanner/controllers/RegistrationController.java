@@ -15,30 +15,35 @@ import java.util.Map;
 public class RegistrationController {
 
     @GetMapping("registration")
-    //@Valid from hibernate-validator for validation
-    public String getRegistration(@Valid @ModelAttribute("registration")
-                                              Registration registration,
-                                  // the binding result is used to
-                                  // get any error signature passed by reference ad display it for us
-                                  BindingResult result
-                                 ){
-        if (result.hasErrors()){
-            System.out.println("There were errors");
-            return "registration";
-        }
+    public String getRegistration(@ModelAttribute("registration")
+                                              Registration registration)
+    {
 
+        System.out.println("rE");
         return "registration";
     }
 
     @PostMapping("registration")
-    public String addRegistration(@ModelAttribute("registration")
-                                          Registration registration){
+    //@Valid from hibernate-validator for validation
+    public String addRegistration(@Valid @ModelAttribute("registration")
+                                          Registration registration,
+                                  // the binding result is used to
+                                  // get any error signature passed by reference ad display it for us
+                                  BindingResult result) {
 
-        System.out.println("Registration: " +registration.getName());
+        if (result.hasErrors()) {
+            System.out.println("There were errors");
+            return "registration";
+        }
+
+        System.out.println("Registration: " + registration.getName());
         //Post-Redirect-Get Pattern
         // redirect to registration page
         return "redirect:registration";
+
     }
+
+
 
 
 
