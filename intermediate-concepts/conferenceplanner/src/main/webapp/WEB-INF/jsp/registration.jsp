@@ -19,7 +19,6 @@
         .error{
             color: #ff0000;
         }
-
         .errorblock{
             color: #000;
             background-color: #ffEEEE;
@@ -27,10 +26,7 @@
             padding: 8px;
             margin: 16px;
         }
-
     </style>
-
-
 
     <form:form modelAttribute="registration">
         <form:errors path="*" cssClass=".errorblock" element="div"/>
@@ -40,6 +36,11 @@
                     <spring:message code="name"/>
                 </td>
                 <td><form:input path="name"/></td>
+
+                <td>
+                    <form:errors path="name" cssClass="error"/>
+                </td>
+
             </tr>
             <td colspan="2">
                 <input type="submit" value="Add Registration">
