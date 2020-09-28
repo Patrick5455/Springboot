@@ -20,8 +20,13 @@ public class RegistrationController {
                                               Registration registration,
                                   // the binding result is used to
                                   // get any error signature passed by reference ad display it for us
-                                  BindingResult result,
-                                  ModelMap modelMap){
+                                  BindingResult result
+                                 ){
+        if (result.hasErrors()){
+            System.out.println("There were errors");
+            return "registration";
+        }
+
         return "registration";
     }
 
